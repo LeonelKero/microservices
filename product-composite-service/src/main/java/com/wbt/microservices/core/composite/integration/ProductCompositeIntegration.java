@@ -40,10 +40,9 @@ public class ProductCompositeIntegration implements ProductService, ReviewServic
             Long rsPort) {
         this.restTemplate = restTemplate;
         this.objectMapper = objectMapper;
-        // todo: Build real service URL
-        this.productServiceUrl = "http://"+productServiceUrl + ":" + psPort+"/products";
-        this.recommendationServiceUrl = recommendationServiceUrl + ":" + rcPort;
-        this.reviewServiceUrl = reviewServiceUrl + ":" + rsPort;
+        this.productServiceUrl = "http://" + productServiceUrl + ":" + psPort + "/products";
+        this.recommendationServiceUrl = "http://" + recommendationServiceUrl + ":" + rcPort + "/recommendations";
+        this.reviewServiceUrl = "http://" + reviewServiceUrl + ":" + rsPort + "/reviews";
     }
 
     @Override
